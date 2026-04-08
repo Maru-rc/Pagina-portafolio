@@ -1,57 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
+    font-family: "PT Serif", serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
 }
 
-body{
+body
+{
     background-color: #d6d6bf;
 }
-#navportafolio{
-    background-color: rgba(28, 116, 72, 0.466);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 85px;
-    padding: 5px 10%;
+
+.header
+{
+background-color: #ebb667;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 70px;
+padding: 15px;
 }
-h1{
-    text-align: center;
-    width: rem;
+
+.header .navlinks li
+{
+    font-weight: bold;
+    list-style: none;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: large;
 }
-h2{
+
+.header .navlinks a
+{
+    text-decoration: none;
+    color: black;
+}
+.header .navlinks li:hover
+{
+transform: scale(1.1);
+}
+h1,h2
+{
     text-align: center;
 }
 
-img {
+img 
+{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
-#largas{
+#largas
+{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
 }
-ul{
-    list-style-type: none;
-}
-#navegador li a{
-    display: inline-block;
-    padding: 0 20px;
-    color: black;
-    list-style: none;
-    text-decoration: none;
-}
 
-#portafolio{
-    display: flex;
-    justify-content: center;
-}
-#portafolio:hover{
+
+
+#portafolio:hover
+{
     color: rgb(16, 192, 119);
 }
