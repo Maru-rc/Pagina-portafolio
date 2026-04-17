@@ -3,52 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portafolio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>portafolio</title>
+    <link rel="icon" href="https://static.wikia.nocookie.net/corajeelperrocobarde/images/1/1c/Coraje_el_perro_cobardepng.png/revision/latest/thumbnail/width/360/height/360?cb=20211110204145&path-prefix=es">
 </head>
 <body>
-    <header class="header">
-        <h1 id="Manuel">Manuel Rueda</h1>
-        <nav>
-            <ul class="navlinks">
-                <li><a href="#Sobre mi">Sobre mi</a></li>
-                <li><a href="#Proyectos">Proyectos</a></li>
-                <li><a href="#Contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div>
+            <h1>Manuel Rueda</h1>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li>Sobre mi</li>
+                    <li>Proyectos</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-
-        <section id="Sobre mi">
+    <section>
+        <div>
             <h2>Sobre mi</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum magnam eligendi sunt tempore! Voluptas assumenda praesentium dolorum officia rerum vel, impedit eos adipisci quos dolores velit necessitatibus facilis est earum.</p>
-        </section>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, odio! Facilis earum similique corrupti nobis inventore asperiores vero iste facere?</p>
+        </div>
+    </section>
 
-        <section id="Proyectos">
-            <h2>Proyectos</h2>
-            <ul>
-                <li><a href="https://www.w3schools.com/">Proyecto W3SCHOOL</a></li>
-                <li><a href="https://es.stackoverflow.com/">Proyecto Stack Overflow</a></li>
-            </ul>
-        </section>
+    <section>
+        <h2>Mis proyectos</h2>
+        <div id="padre-proyectos">
+            <div>
+                <h3>Proyecto discord</h3>
+                <a href="https://discord.com/">Enlace al proyecto</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, praesentium!</p>
+            </div>
 
-        <section id="Contacto">
-            <h2>Contacto</h2>
+            <div>
+                <h3>Proyecto discord</h3>
+                <a href="https://discord.com/">Enlace al proyecto</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, praesentium!</p>
+            </div>
+
+            <div>
+                <h3>Proyecto discord</h3>
+                <a href="https://discord.com/">Enlace al proyecto</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, praesentium!</p>
+            </div>
+
+            <div>
+                <h3>Proyecto discord</h3>
+                <a href="https://discord.com/">Enlace al proyecto</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, praesentium!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div>
             <form>
-                <label for="Nombre">Nombre:</label>
-                <input type="text" name="Nombre">
+                <label for="Nombre">Nombre:</label> <input type="text">
                 <br> <label for="Correo">Correo:</label>
-                <input type="email" name="Correo">
-                <br> <label for="Telefono">Telefono:</label>
-                <input type="tel" name="Telefono">
-                <br> <button type="submit">Enviar</button>
+                <input type="email">
+                <br><label for="Mensaje">Mensaje:</label> 
+                <textarea name=""></textarea>
             </form>
-        </section>
-
-        <br><a href="/mascotas.html" target="_blank">Pagina mascotas</a>
-        
-    </main>
+        </div>
+    </section>
+    
+    <div class="links">
+        <a href="mascotas.html" >Mis mascotas</a>
+    </div>
 
 </body>
 </html>
