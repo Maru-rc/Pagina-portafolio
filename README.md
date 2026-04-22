@@ -1,4 +1,3 @@
 # Pagina-portafolio
-PAgina web del portafolio
+Pagina web del portafolio
 
-link github: https://github.com/Maru-rc/Pagina-portafolio.git
