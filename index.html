@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="minified.css">
     <title>Portafolio — Manuel Rueda</title>
     <link rel="icon" href="https://static.wikia.nocookie.net/corajeelperrocobarde/images/1/1c/Coraje_el_perro_cobardepng.png/revision/latest/thumbnail/width/360/height/360?cb=20211110204145&path-prefix=es">
 </head>
 <body>
-
-    <div id="mensaje-bienvenida"></div>
-
     <header>
         <div>
             <h1>Manuel Rueda</h1>
@@ -27,22 +24,27 @@
     </header>
 
     <section>
-        <div>
-            <h2>Sobre mí</h2>
-
-            <p id="sobre-mi">Soy un coder en formacion, apasionado por la tecnologia y los retos.</p>
-            <button id="boton-cambio-color">Cambiar color</button>
-            <button id="boton-cambio-texto">Cambiar texto</button>
-            <button id="boton-mostrar-extra">Ver mis habilidades</button>
-
-            <div id="contenido-extra">
-                <h3>Mis habilidades</h3>
-                <ul>
-                    <li>HTML & CSS</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>Git & GitHub</li>
-                </ul>
+        <div class="sobre-mi-contenedor">
+            <div id="texto-sobre-mi">
+                <h2>Sobre mí</h2>
+                <p id="sobre-mi">Soy un coder en formación, apasionado por la tecnología, los retos y todo lo que tenga que ver con resolver problemas a través del código. Cada día aprendo algo nuevo y eso es lo que más me motiva.</p>
+                <div class="sobre-mi-botones">
+                    <button id="boton-cambio-color">Cambiar color</button>
+                    <button id="boton-cambio-texto">Cambiar texto</button>
+                    <button id="boton-mostrar-extra">Ver mis habilidades</button>
+                </div>
+                <div id="contenido-extra">
+                    <h3>Mis habilidades</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sobre-mi-derecha">
+                <img src="Foto mia.jpeg" alt="Foto mia">
             </div>
         </div>
     </section>
@@ -73,9 +75,9 @@
         </div>
     </section>
 
-    <section id="contacto">
-        <h2 id="h2-contacto">Contacto</h2>
-        <div>
+    <section>
+        <div id="Contacto">
+            <h2>Contacto</h2>
             <form>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">

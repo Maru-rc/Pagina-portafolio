@@ -17,7 +17,6 @@
     --tam-md: 1.125rem;
     --tam-lg: 1.5rem;
     --tam-xl: 2rem;
-    --tam-xxl: 2.5rem;
 
     --radio-borde: 15px;
     --sombra-tarjeta: 6px 10px 20px var(--color-sombra);
@@ -194,17 +193,6 @@ button:active,
 }
 
 
-#mensaje-bienvenida {
-    background-color: var(--color-primario);
-    color: var(--color-texto-claro);
-    text-align: center;
-    padding: 0.75rem 1rem;
-    font-size: var(--tam-md);
-    letter-spacing: 0.03em;
-    animation: fadeIn 0.6s ease;
-}
-
-
 #contenido-extra {
     overflow: hidden;
     max-height: 0;
@@ -217,12 +205,15 @@ button:active,
     opacity: 1;
 }
 
-
+#Contacto h2{
+    text-align: center;
+}
 form {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     max-width: 500px;
+    margin: 0 auto;
 }
 
 form label {
@@ -245,7 +236,47 @@ form textarea {
     min-height: 100px;
 }
 
-@media (max-width: 900px) {
+
+.sobre-mi-contenedor {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+
+.sobre-mi-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+
+.sobre-mi-derecha {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.sobre-mi-derecha img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radio-borde);
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 600px) {
+    .sobre-mi-contenedor {
+        flex-direction: column-reverse;
+    }
+
+    .sobre-mi-derecha {
+        width: 100%;
+    }
+}
+
     #padre-proyectos {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -258,7 +289,7 @@ form textarea {
     header h1 {
         font-size: var(--tam-lg);
     }
-}
+
 
 
 @media (max-width: 600px) {
