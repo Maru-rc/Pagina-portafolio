@@ -1,78 +1,298 @@
-body{
-    margin: 0;
+:root {
+    --color-primario: rgb(83, 61, 61);
+    --color-primario-transparente: rgba(83, 61, 61, 0.514);
+    --color-acento: rgb(109, 70, 70);
+    --color-fondo: #faf7f7;
+    --color-borde: #c4a09a;
+    --color-sombra: rgba(83, 61, 61, 0.3);
+    --color-texto: #2c1a1a;
+    --color-texto-claro: #ffffff;
+
+    --fuente-titulo: 'Georgia', serif;
+    --fuente-cuerpo: 'Trebuchet MS', sans-serif;
+
+    --tam-xs: 0.75rem;
+    --tam-sm: 0.875rem;
+    --tam-base: 1rem;
+    --tam-md: 1.125rem;
+    --tam-lg: 1.5rem;
+    --tam-xl: 2rem;
+    --tam-xxl: 2.5rem;
+
+    --radio-borde: 15px;
+    --sombra-tarjeta: 6px 10px 20px var(--color-sombra);
+    --transicion: 0.3s ease;
 }
 
-header{
-    background-color: rgba(83, 61, 61, 0.514);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    font-size: var(--tam-base);
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: var(--color-primario-transparente);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-header ul{
+header h1 {
+    margin: 1.25rem 0.5rem;
+    font-family: var(--fuente-titulo);
+    font-size: var(--tam-xl);
+    color: var(--color-texto);
+}
+
+header h2 {
+    margin: 0 1rem;
+    font-size: var(--tam-lg);
+}
+
+header nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0 15px;
+    gap: 1rem;
+    margin: 0 1rem;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
-header h1{
-    margin: 20px 8px;
+header nav ul li {
+    font-size: var(--tam-md);
+    cursor: pointer;
+    transition: color var(--transicion);
 }
 
-section{
-    margin: 8px;
+header nav ul li:hover {
+    color: var(--color-acento);
 }
 
-#Proyectos ul{
-    padding-left: 8px;
+
+section {
+    margin: 1rem;
 }
 
-header h2{
-    margin: 0 15px;
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: opacity var(--transicion);
 }
 
+a:hover {
+    opacity: 0.75;
+    text-decoration: underline;
+}
+
+.links {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: var(--tam-md);
+}
+
+
+#padre-proyectos div,
+#Mascotas div {
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-tarjeta);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+    background-color: #fff;
+}
+
+#padre-proyectos div:hover,
+#Mascotas div:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 14px 28px var(--color-sombra);
+}
+
+
+#padre-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 1rem;
+}
+
+#padre-proyectos div {
+    padding: 1rem;
+}
+
+#padre-proyectos h3 {
+    font-size: var(--tam-md);
+    margin-bottom: 0.5rem;
+}
 
 #Mascotas {
     display: grid;
-    max-width: 50%;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 16px;
-    margin: 20px auto;
+    max-width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem auto;
 }
 
-#Mascotas img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-#Mascotas div{
+#Mascotas div {
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 2px solid;
-    border-radius: 15px;
-    box-shadow: 10px 15px grey;
+    padding: 0.75rem;
 }
 
-.links{
+img,
+#Mascotas img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#sobre-mi {
+    font-size: var(--tam-md);
+    max-width: 700px;
+    transition: color var(--transicion);
+}
+
+
+button,
+.btn {
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: var(--tam-base);
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--color-acento);
+    transform: scale(1.04);
+}
+
+button:active,
+.btn:active {
+    transform: scale(0.97);
+}
+
+
+#mensaje-bienvenida {
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
     text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: var(--tam-md);
+    letter-spacing: 0.03em;
+    animation: fadeIn 0.6s ease;
 }
 
-a{
-  color: rgb(109, 70, 70);
+
+#contenido-extra {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
 }
 
-#padre-proyectos{
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
-    text-align: center;
-    gap: 15px;
+#contenido-extra.visible {
+    max-height: 300px;
+    opacity: 1;
 }
 
-#padre-proyectos div{
-    border: 2px solid;
-    border-radius: 15px;
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 500px;
 }
 
+form label {
+    font-size: var(--tam-sm);
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+form input,
+form textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: var(--tam-base);
+    font-family: var(--fuente-cuerpo);
+    width: 100%;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+@media (max-width: 900px) {
+    #padre-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #Mascotas {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: var(--tam-lg);
+    }
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 0.5rem 0;
+    }
+
+    header h1 {
+        font-size: var(--tam-lg);
+        margin: 0.5rem 0;
+    }
+
+    #padre-proyectos {
+        grid-template-columns: 1fr;
+    }
+    
+    #Mascotas {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
+
+    #sobre-mi {
+        font-size: var(--tam-base);
+    }
+
+    form {
+        max-width: 100%;
+    }
+}

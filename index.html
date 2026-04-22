@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>portafolio</title>
+    <title>Portafolio — Manuel Rueda</title>
     <link rel="icon" href="https://static.wikia.nocookie.net/corajeelperrocobarde/images/1/1c/Coraje_el_perro_cobardepng.png/revision/latest/thumbnail/width/360/height/360?cb=20211110204145&path-prefix=es">
 </head>
 <body>
+
+    <div id="mensaje-bienvenida"></div>
+
     <header>
         <div>
             <h1>Manuel Rueda</h1>
@@ -15,9 +18,9 @@
         <div>
             <nav>
                 <ul>
-                    <li>Sobre mi</li>
-                    <li>Proyectos</li>
-                    <li>Contacto</li>
+                    <li><a href="#sobre-mi">Sobre mi</a></li>
+                    <li><a href="#padre-proyectos">proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,8 +28,22 @@
 
     <section>
         <div>
-            <h2>Sobre mi</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, odio! Facilis earum similique corrupti nobis inventore asperiores vero iste facere?</p>
+            <h2>Sobre mí</h2>
+
+            <p id="sobre-mi">Soy un coder en formacion, apasionado por la tecnologia y los retos.</p>
+            <button id="boton-cambio-color">Cambiar color</button>
+            <button id="boton-cambio-texto">Cambiar texto</button>
+            <button id="boton-mostrar-extra">Ver mis habilidades</button>
+
+            <div id="contenido-extra">
+                <h3>Mis habilidades</h3>
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -34,47 +51,50 @@
         <h2>Mis proyectos</h2>
         <div id="padre-proyectos">
             <div>
-                <h3>Proyecto discord</h3>
+                <h3>Proyecto Discord</h3>
                 <a href="https://discord.com/">Enlace al proyecto</a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, praesentium!</p>
+                <p>Discord es una aplicacion de mensajería con servidores y canales. Muy popular entre gamers y comunidades de programadores donde puedes hacer preguntas y hablar en tiempo real.</p>
             </div>
-
             <div>
-                <h3>Proyecto discord</h3>
-                <a href="https://discord.com/">Enlace al proyecto</a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, praesentium!</p>
+                <h3>Proyecto stackoverflow</h3>
+                <a href="https://stackoverflow.com/questions">Enlace al proyecto</a>
+                <p>Stack Overflow es un foro de preguntas y respuestas sobre programación. Si tienes un error o duda de código, probablemente alguien ya lo preguntó y tiene respuesta ahí.</p>
             </div>
-
             <div>
-                <h3>Proyecto discord</h3>
-                <a href="https://discord.com/">Enlace al proyecto</a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, praesentium!</p>
+                <h3>Proyecto Udemy</h3>
+                <a href="https://www.udemy.com/personal/home/">Enlace al proyecto</a>
+                <p>Udemy es una plataforma de cursos online de pago. Tiene cursos de programación, diseño, negocios, etc. Los cursos los crean instructores independientes y frecuentemente tienen descuentos.</p>
             </div>
-
             <div>
-                <h3>Proyecto discord</h3>
-                <a href="https://discord.com/">Enlace al proyecto</a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, praesentium!</p>
+                <h3>Proyecto Youtube</h3>
+                <a href="https://www.youtube.com/">Enlace al proyecto</a>
+                <p>YouTube es una plataforma de videos gratuita. Es muy util ya que tiene videos de practicamente cualquier cosa y sobre cualquier tema</p>
             </div>
-
         </div>
     </section>
 
-    <section>
+    <section id="contacto">
+        <h2 id="h2-contacto">Contacto</h2>
         <div>
             <form>
-                <label for="Nombre">Nombre:</label> <input type="text">
-                <br> <label for="Correo">Correo:</label>
-                <input type="email">
-                <br><label for="Mensaje">Mensaje:</label> 
-                <textarea name=""></textarea>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="tu@correo.com">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                <button type="submit" class="btn">Enviar mensaje</button>
             </form>
         </div>
     </section>
-    
+
     <div class="links">
-        <a href="mascotas.html" >Mis mascotas</a>
+        <a href="mascotas.html"> Mis mascotas</a>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
